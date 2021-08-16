@@ -5,8 +5,8 @@
 - Report Link: _Insert Report Link if applicable_
 
 # Dependencies
-- Language: _i.e Python 3.8.3 and/or R 4.05_
-- Packages / Libraries: _i.e pandas, pyspark, sklearn, statsmodels, folium, etc... OR add a `requirements.txt`_
+- Language: Python 3.8.3 
+- Packages / Libraries:pandas, sklearn, statsmodels, folium, numpy, matplotlib, scipy, warnings, datetime, glmnet, seaborn, 
 
 # Datasets
 - NYC TLC: https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
