@@ -93,11 +93,8 @@ The tip excluded amount is clearly right skewed as shown in Figure 1. As such, a
 was applied which resulted in a more Gaussian, even distribution Figure 2. While most values were
 less than 60, values greater than that were still valid and only invalid points were removed with the
 pay per mile variable previous.<br>
-![Figure 1](plots/f1.png)  
+![Figure 1](plots/f1_f2.png)  
 *Figure 1*
-
-![Figure 2](plots/f2.png)  
-*Figure 2*
 
 Figure 3 and Figure 4 depict that trip distance was right skewed thus a log transformation was applied
 for standardisation. While most values lied between 0 and 25, many high values outlying data were
