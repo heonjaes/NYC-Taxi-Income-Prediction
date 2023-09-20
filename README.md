@@ -93,22 +93,13 @@ The tip excluded amount is clearly right skewed as shown in Figure 1. As such, a
 was applied which resulted in a more Gaussian, even distribution Figure 2. While most values were
 less than 60, values greater than that were still valid and only invalid points were removed with the
 pay per mile variable previous.<br>
-![Figure 1](plots/f1_f2.png)  
-*Figure 1*
+![Figure 1 and 2](plots/f1_f2.png)  
 
 Figure 3 and Figure 4 depict that trip distance was right skewed thus a log transformation was applied
 for standardisation. While most values lied between 0 and 25, many high values outlying data were
 still valid distances. As such, the pay per mile variable was utilised to remove invalid points.
-<div style="display: flex; flex-direction: row; justify-content: space-between;">
-    <div style="flex: 1; text-align: center;">
-        <img src="plots/f3.png" alt="Figure 3" width="45%">
-        <p>Figure 3</p>
-    </div>
-    <div style="flex: 1; text-align: center;">
-        <img src="plots/f4.png" alt="Figure 4" width="45%">
-        <p>Figure 4</p>
-    </div>
-</div>
+![Figure 3 and 4](plots/f3_f4.png)  
+
 
 
 The distribution for rain and snow were both stacked significantly at 0 (days with no rain or snow).
@@ -129,50 +120,22 @@ amount and trip distance. Figure 6 and Figure 7 suggests strong linear relations
 amount. Investigating this further with Figure 8 demonstrates the strong correlation between the two
 variables. Across the entirety of the year, both variables trend very tightly together.
 
-<div style="display: flex; flex-direction: row; justify-content: space-between;">
-    <div style="flex: 1; text-align: center;">
-        <img src="plots/f6.png" alt="Figure 6" width="75%">
-        <p>Figure 6</p>
-    </div>
-    <div style="flex: 1; text-align: center;">
-        <img src="plots/f7.png" alt="Figure 7" width="75%">
-        <p>Figure 7</p>
-    </div>
-    <div style="flex: 1; text-align: center;">
-        <img src="plots/f8.png" alt="Figure 8" width="75%">
-        <p>Figure 8</p>
-    </div> 
-</div>
+![Figure 6,7,8](plots/f6_f7_f8.png)  
+
 While higher temperatures appear to be heavily correlated with higher tip excluded amounts and trip
 distances, it has a weak to near zero correlation with the number of taxi trips.
 As shown in Figure 9, days that rain or snow seem to reduce the average tip excluded amounts
 customers pay. Figure 10 also suggests rain and snow had a small effect on the number of taxi rides
 in a given day.
-<div style="display: flex; flex-direction: row; justify-content: space-between;">
-    <div style="flex: 1; text-align: center;">
-        <img src="plots/f9.png" alt="Figure 9" width="75%">
-        <p>Figure 9</p>
-    </div>
-    <div style="flex: 1; text-align: center;">
-        <img src="plots/f10.png" alt="Figure 10" width="75%">
-        <p>Figure 10</p>
-    </div>
-</div>
+![Figure 9,10](plots/f9_f10.png)  
+
 Meanwhile, the day of the week appears to have an effect on the tip excluded amount and number of
 trips. Figure 11 and Figure 12 demonstrates this as different days of the weak have quite varying levels
 of each variable. Especially, the average number of trips per day seems to be very strongly correlated
 with day of the week. Almost 1.5x the average number of taxi rides occur on Saturday as opposed to
 Monday.
-<div style="display: flex; flex-direction: row; justify-content: space-between;">
-    <div style="flex: 1; text-align: center;">
-        <img src="plots/f11.png" alt="Figure 11" width="75%">
-        <p>Figure 11</p>
-    </div>
-    <div style="flex: 1; text-align: center;">
-        <img src="plots/f12.png" alt="Figure 12" width="75%">
-        <p>Figure 10</p>
-    </div>
-</div>
+![Figure 11,12](plots/f11_f12.png)  
+
 While the amount earned and travelled on average for each trip appears to increase with higher
 temperatures, the number of taxi rides doesn’t appear to be effected as no real correlation or trend is
 evident.
@@ -235,17 +198,6 @@ from the model fitted. Figure 18 depicts how closely predicted values by the tra
 true values of the test data. While the general direction of the predictions resembles the true values,
 it performed quite poorly with a R-squared score of -0.0443.
 <br>
-As predictions matched the real values of the trained data, but poorly against new data, this could
-indicate the existence of overfitting to the training data. Additionally, investigating the test data
-predictions shows that the true tip excluded performed worse with lower values of tip excluded (higher
-residuals). In Figure 15, the real tip excluded amounts in the test data followed similarly with higher
-values but dipped lower than the training data did while having similar temperature values.
-<br>
-Especially as overfitting is suspected to have occurred, it appears as though the model was incapable of
-making sense of why the lower dip in tip excluded amount occurred based on the explanatory variables
-it can work with. This heavily implies there are vital explanatory variables we have not considered or
-there may not be a non-linear relationship between the variables explored.
-
 <div style="display: flex; flex-direction: row; justify-content: space-between;">
     <div style="flex: 1; text-align: center;">
         <img src="plots/f15.png" alt="Figure 15" width="75%">
@@ -255,9 +207,26 @@ there may not be a non-linear relationship between the variables explored.
         <img src="plots/f16.png" alt="Figure 16" width="75%">
         <p>Figure 16</p>
     </div>
+</div>  
+As predictions matched the real values of the trained data, but poorly against new data, this could
+indicate the existence of overfitting to the training data. Additionally, investigating the test data
+predictions shows that the true tip excluded performed worse with lower values of tip excluded (higher
+residuals). In Figure 15, the real tip excluded amounts in the test data followed similarly with higher
+values but dipped lower than the training data did while having similar temperature values.
+<br><br>
+Especially as overfitting is suspected to have occurred, it appears as though the model was incapable of
+making sense of why the lower dip in tip excluded amount occurred based on the explanatory variables
+it can work with. This heavily implies there are vital explanatory variables we have not considered or
+there may not be a non-linear relationship between the variables explored.
+
+<div style="display: flex; flex-direction: row; justify-content: space-between;">
     <div style="flex: 1; text-align: center;">
         <img src="plots/f17.png" alt="Figure 17" width="75%">
         <p>Figure 17</p>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="plots/f18.png" alt="Figure 18" width="75%">
+        <p>Figure 18</p>
     </div> 
 </div>
 
